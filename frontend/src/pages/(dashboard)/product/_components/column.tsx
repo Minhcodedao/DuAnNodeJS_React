@@ -51,9 +51,9 @@ export const columns: ColumnDef<IProduct>[] = [
     accessorKey: "category",
     header: "Danh mục",
     cell: ({ row }) => {
-      return <div>{row?.original?.category?.name}</div>;
+      return <div>{row?.original?.category}</div>;
     },
-  },
+},
   {
     accessorKey: "price",
     header: "Giá",

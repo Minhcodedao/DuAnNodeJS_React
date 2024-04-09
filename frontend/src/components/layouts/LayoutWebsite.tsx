@@ -1,6 +1,5 @@
-import React from "react";
-import { Header, Footer } from "../Index";
 import { Outlet } from "react-router-dom";
+import { Footer, Header } from "../Index";
 
 const LayoutWebsite = () => {
   return (

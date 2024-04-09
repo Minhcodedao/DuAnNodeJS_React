@@ -1,23 +1,21 @@
 
-import { Route, Routes } from "react-router-dom";
-import HomePage from "../pages/(website)/home/home";
-import ShopPage from "../pages/Shop";
-import AboutPage from "../pages/(website)/about/about";
-import ContactPage from "../pages/(website)/contact/contact";
-import LayoutWebsite from "../components/layouts/LayoutWebsite";
-import DetailProduct from "../pages/(website)/product/detail/detail-product";
-import LayoutAdmin from "../components/layouts/LayoutAdmin";
-import NotFound from "../pages/(website)/404/notFound";
-import ProductAdd from "../pages/(dashboard)/product/_components/add";
-import ProductEdit from "../pages/(dashboard)/product/_components/edit";
-import { Toaster } from "@/components/ui/toaster";
-import CategoryDetail from "../pages/(website)/product/category/CategoryDetail";
-import CartPage from "../pages/(website)/cart/cart";
-import SignIn from "../pages/(website)/(auth)/signin";
-import SignUp from "../pages/(website)/(auth)/signup";
-import PrivateRoute from "./PrivateRoute";
+import FormProduct from "@/pages/(dashboard)/product/_components/Form";
 import ProductManagement from "@/pages/(dashboard)/product/pages";
 import OrderPage from "@/pages/(website)/order/page";
+import { Route, Routes } from "react-router-dom";
+import LayoutAdmin from "../components/layouts/LayoutAdmin";
+import LayoutWebsite from "../components/layouts/LayoutWebsite";
+import SignIn from "../pages/(website)/(auth)/signin";
+import SignUp from "../pages/(website)/(auth)/signup";
+import NotFound from "../pages/(website)/404/notFound";
+import AboutPage from "../pages/(website)/about/about";
+import CartPage from "../pages/(website)/cart/cart";
+import ContactPage from "../pages/(website)/contact/contact";
+import HomePage from "../pages/(website)/home/home";
+import CategoryDetail from "../pages/(website)/product/category/CategoryDetail";
+import DetailProduct from "../pages/(website)/product/detail/detail-product";
+import ShopPage from "../pages/Shop";
+import PrivateRoute from "./PrivateRoute";
 const Router = () => {
   return (
     <>
@@ -40,8 +38,8 @@ const Router = () => {
     </PrivateRoute>}
     >
       <Route path="products" element={<ProductManagement />} />
-      <Route path="products/add" element={<ProductAdd />} />
-      <Route path="products/:id/edit" element={<ProductEdit />} />
+      <Route path="products/add" element={<FormProduct />} />
+      <Route path="products/:id/edit" element={<FormProduct />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </Routes>

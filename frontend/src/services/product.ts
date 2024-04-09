@@ -40,3 +40,29 @@ export const addProduct = async (product: IProduct) => {
     console.log(error);
   }
 };
+export const removeProduct = async (product: IProduct) => {
+  try {
+      const response = await instance.delete(`/products/${product._id}`, {
+          headers: {
+              'Content-Type': 'application/json',
+              "Authorization": "Bearer " + token ? token : ''
+          },
+      })
+      return response.data
+  } catch (error) {
+      console.log(error)
+  }
+}
+export const editProduct = async (product: IProduct) => {
+  try {
+      const response = await instance.put(`/products/${product._id}`, product, {
+          headers: {
+              'Content-Type': 'application/json',
+              "Authorization": "Bearer " + token ? token : ''
+          },
+      })
+      return response.data
+  } catch (error) {
+      console.log(error)
+  }
+}

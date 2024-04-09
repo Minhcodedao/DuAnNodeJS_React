@@ -8,7 +8,6 @@ const LayoutAdmin = () => {
       <aside><Sidebar/></aside>
       <main>
         <Outlet />
-        LayoutAdmin một
       </main>
     </div>
   );
